@@ -1,14 +1,14 @@
 Set wshShell = CreateObject("WScript.Shell")
 
-' 5 Sekunden Wartezeit, um ins Spiel zu klicken
+' 5 Seconds Waiting time to set everything up and close all windows
 WScript.Sleep 5000
 
-' Läuft jetzt 20.000 Mal (dauert ungefähr 10 Minuten)
+' Runs everytime 40.000 Times (Should be around 20 Minutes)
 For i = 1 To 40000
-    wshShell.SendKeys " "        ' Leertaste
-    wshShell.SendKeys "{ENTER}"  ' Enter-Taste
-    wshShell.SendKeys "{ENTER}"  ' Nummernblock-Enter
-    WScript.Sleep 15             ' 15 Millisekunden Pause für stabile 10 Minuten
+    wshShell.SendKeys " "        ' Space
+    wshShell.SendKeys "{ENTER}"  ' Enter
+    wshShell.SendKeys "{ENTER}"  ' Numpad Enter
+    WScript.Sleep 15             ' 15 Milliseconds Break for stable 10 Minutes
 Next
 
-MsgBox "Die 20-Minuten-Runde ist vorbei! Das Skript hat gestoppt.", 64, "Gestoppt"
+MsgBox "The 20 Minutes are ended! The Script stopped.", 64, "Gestoppt"
